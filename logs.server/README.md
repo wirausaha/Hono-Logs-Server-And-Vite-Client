@@ -4,10 +4,22 @@ Aplikasi server ini sangat ringan hanya memiliki 3 router dan mungkin akan saya 
 
 ```bash
 npm install
+
+> buat file .env atau copy file .env.sample ke .env lalu edit sesuaikan setting di komputer anda 
+
 npm run dev
 
 atau :
 
 npm run build
+
+> buat file .env atau copy file .env.sample ke .env lalu edit sesuaikan setting di komputer anda 
+
 npm run start
+
+> Pastikan client berjalan pada port yang berbeda dengan server, misalnya klien di port 3000, server di port 3001 
+
+> Aplikasi server ini bisa dijalankan di serverless dengan sedikit penyesuaian dan bisa dimanfaatkan untuk semua project
+> dengan menambahkan misalnya field : SourceApp 
+> tergantung kreatifitas dan kebutuhan masing-masing
 
