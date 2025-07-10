@@ -45,8 +45,11 @@ app.route('/api/', writelogs)
 import { readlogs } from '@routes/readlogs'
 app.route('/api/', readlogs)
 
+import { sourceapps } from '@routes/sourceapplist'
+app.route('/api/', sourceapps)
+
 import { deletelogs } from '@routes/deletelogs'
-app.route('/api/', readlogs)
+app.route('/api/', deletelogs)
 
 serve({ fetch: app.fetch, port, hostname: "0.0.0.0" });
 

@@ -7,7 +7,7 @@
 import { Hono } from 'hono';
 import prisma from '@lib/prisma-client'
 import { Prisma } from '@prisma/client';
-import { logSystemEvent } from '@helper/cache';
+import { logSystemEvent } from '@helper/logs';
 import { generateRandomString } from '@utils/randomstring'
 
 export const deletelogs = new Hono();

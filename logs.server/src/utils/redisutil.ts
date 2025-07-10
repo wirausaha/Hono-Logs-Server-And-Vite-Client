@@ -1,5 +1,5 @@
 import Redis from 'ioredis'
-import { logSystemEvent } from '@helper/cache'
+import { logSystemEvent } from '@helper/logs'
 
 const redis = new Redis({
   host: 'localhost',
@@ -15,15 +15,15 @@ export async function getOrCache<T>(
 ): Promise<T> {
   const cached = await redis.get(key)
   if (cached) {
-    await logSystemEvent('redis', 'Redis hit', {}, key);
+    await logSystemEvent('redis', 'Redis hit',"","", {}, key);
     console.log('Redis hit:', key)
     return JSON.parse(cached)
   }
 
-  await logSystemEvent('redis', 'Redis miss', {}, key);
+  await logSystemEvent('redis', 'Redis miss', '', '', {}, key);
   const result = await resolver()
   await redis.set(key, JSON.stringify(result), 'EX', ttl)
-  await logSystemEvent('cache', 'Cache set', {}, key);
+  await logSystemEvent('cache', 'Cache set', '', '', {}, key);
   console.log('Redis miss:', key)
   return result
 }
@@ -33,6 +33,6 @@ export async function getOrCache<T>(
  */
 export async function invalidateCache(key: string): Promise<void> {
   const deleted = await redis.del(key)
-  await logSystemEvent('cache', 'Cache deleted', {}, key);
+  await logSystemEvent('cache', 'Cache deleted', '','', {}, key);
   console.log(deleted ? `Cache deleted: ${key}` : `Cache not found: ${key}`)
 }

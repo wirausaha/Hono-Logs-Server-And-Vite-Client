@@ -19,14 +19,14 @@ const config = {
   presetColor: 'default',
   caption: true,
   sidebarTheme: false,
-  customColor: 'preset-1',
+  customColor: 'preset-4',
   headerColor: '',
   navbarColor: '',
   logoColor: '',
   navbarCaptionColor: '',
   navbarImg: '',
-  menuIcon: 'preset-1',
-  menuLinkIcon: 'preset-1'
+  menuIcon: 'preset-4',
+  menuLinkIcon: 'preset-4'
 };
 
 export default config;

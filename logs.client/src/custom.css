@@ -1,0 +1,34 @@
+body {
+  color: #212121 !important;
+}
+
+.text-custom {
+  color: #212121 !important;
+}
+
+
+.table {
+  &.table-align-center {
+    td,
+    th {
+      vertical-align: middle;
+      color: #212121 !important;
+    }
+  }
+  thead th {
+    padding: 0.9rem 0.75rem;
+    color: #212121 !important;
+  }
+  td,
+  th {
+    vertical-align: middle;
+  }
+  &.table-borderless {
+    td,
+    th {
+      border: none !important;
+      color: #212121 !important;      
+    }
+  }
+}
+

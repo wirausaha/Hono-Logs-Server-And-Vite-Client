@@ -1,4 +1,4 @@
-/* generator client {
+ generator client {
   provider      = "prisma-client-js"
   binaryTargets = ["native", "debian-openssl-3.0.x"]
 }
@@ -7,23 +7,25 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
- */
-generator client {
+ 
+/* generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "postgresql"
-  url      = env("PRISMA_ACCELERATE_URL") // ini URL dari Prisma Accelerate
+  url      = env("DATABASE_URL") // ini URL dari Prisma Accelerate
   directUrl  = env("DATABASE_URL")
 }
-
+ */
 
 model SystemLog {
   id         Int      @id @default(autoincrement())
+  sourceApp  String?  @default("unknown")
   category   String   // 'redis', 'cache', 'query', 'error'
   message    String
   key        String?  // Redis key atau endpoint ID
+  ip         String? @default("undefined")  // alamat ip sehingga tidak perlu dimasukan di detail
   details    Json?
   createdAt  DateTime @default(now())
 
