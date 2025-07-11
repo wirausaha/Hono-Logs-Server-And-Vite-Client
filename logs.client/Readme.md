@@ -1,6 +1,7 @@
+![](https://imgur.com/a/XPgX2Q2)
+
 Contoh aplikasi sederhana untuk monitoring logs dibuat dengan menggunakan
-Admin template Datta-Able (https://github.com/codedthemes/datta-able-free-react-admin-template) silahkan
-baca file : README-Datta-able.md untuk penjelasannya.
+Admin template Datta-Able (https://github.com/codedthemes/datta-able-free-react-admin-template) silahkan baca file : README-Datta-able.md untuk penjelasannya.
 
 cara install 
 
